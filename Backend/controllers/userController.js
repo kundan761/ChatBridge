@@ -89,5 +89,21 @@ const getUserProfile = async (req, res) => {
     }
 };
 
+// @desc get all users
+// @route GET /api/user/allusers
+// @access Private
+const getAllUsers = async (req, res) => {
+    try {
+        const users = await User.find().select("-password");
+        if (!users) {
+            return res.status(404).json({ message: "No users found" });
+        }
+        return res.status(200).json(users);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "Internal server error" });
+    }
+}
 
-export { registerUser, loginUser, getUserProfile };
+
+export { registerUser, loginUser, getUserProfile , getAllUsers};
