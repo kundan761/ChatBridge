@@ -81,3 +81,10 @@ button {
 button:hover {
   background-color: #45a049;
 }
+.chat-window.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.2rem;
+}
