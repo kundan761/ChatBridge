@@ -1,5 +1,5 @@
 import React, { useState, KeyboardEvent } from 'react';
-import { Smile, Paperclip as PaperClip, Mic, Send } from 'lucide-react';
+import { Smile, Paperclip, Mic, Send } from 'lucide-react';
 
 interface MessageInputProps {
   onSendMessage: (text: string) => void;
@@ -32,7 +32,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSendMessage }) => {
         
         {/* Attachment button */}
         <button className="p-2 text-gray-500 hover:text-gray-700 rounded-full hover:bg-gray-200 transition-colors">
-          <PaperClip size={24} />
+          <Paperclip size={24} />
         </button>
         
         {/* Message input */}

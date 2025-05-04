@@ -1,17 +1,35 @@
 export interface User {
-    id: string;
-    name: string;
-    avatar: string;
-    isOnline: boolean;
-    lastMessage?: Message;
-    unreadCount: number;
-    messages?: Message[];
-  }
-  
-  export interface Message {
-    id: string;
-    text: string;
-    timestamp: Date;
-    sender: string;
-    isRead: boolean;
-  }
+  _id: string;
+  name: string;
+  mobileNumber: string;
+  profilePic: string;
+  about: string;
+  isOnline?: boolean;
+  lastMessage?: Message;
+  unreadCount: number;
+  messages?: Message[];
+}
+
+export interface Message {
+  _id: string;
+  content: string;
+  sender: string;
+  receiver: string;
+  group?: string;
+  timestamp: Date;
+  isRead?: boolean;
+}
+
+export interface Group {
+  _id: string;
+  name: string;
+  members: string[];
+  admin: string;
+  groupPic: string;
+}
+
+export interface AuthState {
+  user: User | null;
+  token: string | null;
+  isAuthenticated: boolean;
+}

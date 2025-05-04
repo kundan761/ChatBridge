@@ -15,9 +15,9 @@ const Avatar: React.FC<AvatarProps> = ({ user, size = 'md' }) => {
 
   return (
     <div className={`${sizeClasses[size]} rounded-full overflow-hidden flex-shrink-0`}>
-      {user.avatar ? (
+      {user.profilePic ? (
         <img 
-          src={user.avatar} 
+          src={user.profilePic} 
           alt={`${user.name}'s avatar`}
           className="w-full h-full object-cover"
           onError={(e) => {

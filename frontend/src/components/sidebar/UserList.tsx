@@ -49,9 +49,9 @@ const UserList: React.FC = () => {
         {filteredUsers.length > 0 ? (
           filteredUsers.map(user => (
             <UserListItem 
-              key={user.id} 
+              key={user._id} 
               user={user} 
-              isSelected={selectedUser?.id === user.id}
+              isSelected={selectedUser?._id === user._id}
               onClick={() => {
                 selectUser(user);
                 if (isMobile) setShowUserList(false);

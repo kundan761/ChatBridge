@@ -54,7 +54,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages }) => {
           
           {/* Messages for this date */}
           {dateMessages.map(message => (
-            <Message key={message.id} message={message} />
+            <Message key={message._id} message={message} />
           ))}
         </div>
       ))}

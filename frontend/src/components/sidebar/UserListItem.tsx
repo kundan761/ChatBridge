@@ -35,7 +35,7 @@ const UserListItem: React.FC<UserListItemProps> = ({ user, isSelected, onClick }
         
         <div className="flex justify-between items-center mt-1">
           <p className="text-xs text-gray-500 truncate">
-            {user.lastMessage?.text || 'No messages yet'}
+            {user.lastMessage?.content || 'No messages yet'}
           </p>
           
           {user.unreadCount > 0 && (

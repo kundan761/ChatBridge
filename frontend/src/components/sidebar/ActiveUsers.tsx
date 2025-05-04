@@ -24,7 +24,7 @@ const ActiveUsers: React.FC = () => {
             </h3>
             <div className="space-y-4">
               {onlineUsers.map(user => (
-                <div key={user.id} className="flex items-center p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                <div key={user._id} className="flex items-center p-2 hover:bg-gray-50 rounded-lg transition-colors">
                   <div className="relative">
                     <Avatar user={user} size="md" />
                     <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
